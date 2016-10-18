@@ -59,14 +59,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } else if (view == mTv2) {
             new MyDialog(this)
                     .setAnimation(Effectstype.Sidefill)
-                    .leftButton("LieActivity", () -> gotoActivity(LieActivity.class))
-                    .rightButton("RecycleViewActivity", () -> gotoActivity(RecycleViewActivity.class))
+                    .leftButton("demo3", () -> gotoActivity(LieActivity.class))
+                    .rightButton("demo4", () -> gotoActivity(RecycleViewActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
         }
     }
-
-
 
     public void fromJson(){
 //        Gson gson = new Gson();
