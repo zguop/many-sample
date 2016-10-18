@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <!--tabIndicatorColor tab文字下方的那条线的颜色-->
+    <!--tabMode="scrollable" 如果tab过多超出屏幕宽度可以水平滚动-->
+    <!--tabSelectedTextColor="#FFFFFF" tab被选中的时候文字的颜色-->
+    <!--tabTextColor="#FFFFFF" tab未被选中时文字的颜色-->
+    <!--tabTextAppearance="@style/MyTabLayoutTextAppearance" 自定义字体大小（一般使用默认即可）-->
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

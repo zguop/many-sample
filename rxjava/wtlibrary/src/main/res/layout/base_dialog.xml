@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/base_Layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginLeft="48dp"
+              android:layout_marginRight="48dp"
+              android:background="#FFF"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/base_dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#88ff0000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/base_dialog_title_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            tools:src="@drawable/icon"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/base_dialog_title_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:textSize="16sp"
+            tools:text="标题栏"
+            tools:visibility="visible"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/base_dialog_centent_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/base_dialog_centent_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="文字内容区你想说什么都可以在这里说知道吗?"
+            android:textColor="#626262"
+            android:textIsSelectable="true"
+            android:textSize="14dp"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/base_dialog_buttom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#f0f"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e7e7e7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <dawanju.waitou.wtlibrary.DrawableCenterTextView
+                android:id="@+id/base_dialog_buttom_left_click"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="取消"
+                android:textSize="16dp"
+                android:visibility="gone"
+                tools:drawableLeft="@drawable/icon"
+                tools:visibility="visible"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e7e7e7"/>
+
+            <dawanju.waitou.wtlibrary.DrawableCenterTextView
+                android:id="@+id/base_dialog_button_right_click"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="确定"
+                android:textSize="16dp"
+                android:visibility="gone"
+                tools:drawableLeft="@drawable/icon"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
