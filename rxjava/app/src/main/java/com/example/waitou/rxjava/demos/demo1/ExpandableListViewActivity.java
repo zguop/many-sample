@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo1;
+package com.example.waitou.rxjava.demos.demo1;
 
 import android.content.Context;
 import android.os.Bundle;

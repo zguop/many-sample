@@ -27,8 +27,8 @@ public class BaseDialog extends Dialog {
     protected Context mContext;
     protected boolean isCancelable = true;
     protected int mDuration = -1;
-    private Effectstype mEffectstype = null;
 
+    private Effectstype mEffectstype = null;
     private LinearLayout           mBaseLayout; //根布局
     private LinearLayout           mTitleLayout; //标题根布局
     private RelativeLayout         mButtomLayout; //底部按钮根布局

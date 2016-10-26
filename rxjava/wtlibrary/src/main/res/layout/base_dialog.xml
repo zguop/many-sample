@@ -47,8 +47,6 @@
         android:id="@+id/base_dialog_centent_framelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <TextView
@@ -57,6 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:text="文字内容区你想说什么都可以在这里说知道吗?"
             android:textColor="#626262"
             android:textIsSelectable="true"

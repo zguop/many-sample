@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo4;
+package com.example.waitou.rxjava.demos.demo4;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

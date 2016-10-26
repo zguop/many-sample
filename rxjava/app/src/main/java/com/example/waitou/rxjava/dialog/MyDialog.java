@@ -12,6 +12,8 @@ import dawanju.waitou.wtlibrary.BaseDialog;
  */
 public class MyDialog extends BaseDialog {
 
+    private ImageView mImageView;
+
     public MyDialog(Context context) {
         super(context);
         setDialogContentView(R.layout.my);
@@ -21,8 +23,13 @@ public class MyDialog extends BaseDialog {
     }
 
     private void initView() {
-       ImageView imageView = (ImageView) findViewById(R.id.my_dialog_img);
+        mImageView = (ImageView) findViewById(R.id.my_dialog_img);
     }
 
+
+    public BaseDialog setImageIcon(int redId){
+        mImageView.setImageResource(redId);
+        return this;
+    }
 
 }

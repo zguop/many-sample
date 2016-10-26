@@ -5,7 +5,7 @@
               android:layout_height="match_parent">
 
 
-    <com.example.waitou.rxjava.demo1.AnimatedExpandableListView
+    <com.example.waitou.rxjava.demos.demo1.AnimatedExpandableListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

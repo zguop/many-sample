@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo3;
+package com.example.waitou.rxjava.demos.demo3;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -5,7 +5,7 @@
               android:orientation="vertical">
 
 
-    <com.example.waitou.rxjava.demo2.RoundRectImageView
+    <com.example.waitou.rxjava.demos.demo2.RoundRectImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="140dp"

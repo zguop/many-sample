@@ -15,10 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".demo4.RecycleViewActivity"/>
-        <activity android:name=".demo3.LieActivity"/>
-        <activity android:name=".demo1.ExpandableListViewActivity"/>
-        <activity android:name=".demo2.VerticalViewPagerActivity"/>
+        <activity android:name=".demos.demo4.RecycleViewActivity"/>
+        <activity android:name=".demos.demo3.LieActivity"/>
+        <activity android:name=".demos.demo1.ExpandableListViewActivity"/>
+        <activity android:name=".demos.demo2.VerticalViewPagerActivity"/>
+        <activity android:name=".demos.demo5.AnimationsActivity"/>
+        <activity android:name=".demos.demo6.ExpandableActivity"/>
     </application>
 
 </manifest>

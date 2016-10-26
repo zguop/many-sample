@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo2;
+package com.example.waitou.rxjava.demos.demo2;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

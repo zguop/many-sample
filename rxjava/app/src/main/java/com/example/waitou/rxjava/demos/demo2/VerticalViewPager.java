@@ -1,11 +1,11 @@
-package com.example.waitou.rxjava.demo2;
+package com.example.waitou.rxjava.demos.demo2;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.example.waitou.rxjava.demo2.transforms.DefaultTransformer;
+import com.example.waitou.rxjava.demos.demo2.transforms.DefaultTransformer;
 
 /**
  * Created by waitou on 16/10/18.

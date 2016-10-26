@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo2;
+package com.example.waitou.rxjava.demos.demo2;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
  
-package com.example.waitou.rxjava.demo1;
+package com.example.waitou.rxjava.demos.demo1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -5,10 +5,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.waitou.rxjava.base.BaseActivity;
-import com.example.waitou.rxjava.demo1.ExpandableListViewActivity;
-import com.example.waitou.rxjava.demo3.LieActivity;
-import com.example.waitou.rxjava.demo2.VerticalViewPagerActivity;
-import com.example.waitou.rxjava.demo4.RecycleViewActivity;
+import com.example.waitou.rxjava.demos.demo1.ExpandableListViewActivity;
+import com.example.waitou.rxjava.demos.demo2.VerticalViewPagerActivity;
+import com.example.waitou.rxjava.demos.demo3.LieActivity;
+import com.example.waitou.rxjava.demos.demo4.RecycleViewActivity;
+import com.example.waitou.rxjava.demos.demo5.AnimationsActivity;
+import com.example.waitou.rxjava.demos.demo6.ExpandableActivity;
 import com.example.waitou.rxjava.dialog.MyDialog;
 import com.example.waitou.rxjava.main.FontHelper;
 
@@ -19,6 +21,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView mTv1;
     private TextView mTv2;
+    private TextView mTv3;
 
 
     @Override
@@ -28,8 +31,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         FontHelper.injectFont(findViewById(android.R.id.content));
         mTv1 = (TextView) findViewById(R.id.tv1);
         mTv2 = (TextView) findViewById(R.id.tv2);
+        mTv3 = (TextView) findViewById(R.id.tv3);
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
+        mTv3.setOnClickListener(this);
        // fromJson();
        // toJson();
     }
@@ -61,6 +66,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .setAnimation(Effectstype.Sidefill)
                     .leftButton("demo3", () -> gotoActivity(LieActivity.class))
                     .rightButton("demo4", () -> gotoActivity(RecycleViewActivity.class))
+                    .leftIcon(R.drawable.icon)
+                    .show();
+        }else if(view == mTv3){
+            new MyDialog(this)
+                    .setImageIcon(R.drawable.img6)
+                    .setAnimation(Effectstype.Flipv)
+                    .leftButton("demo5", () -> gotoActivity(AnimationsActivity.class))
+                    .rightButton("demo6", () -> gotoActivity(ExpandableActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
         }

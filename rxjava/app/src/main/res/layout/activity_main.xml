@@ -17,11 +17,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="点开看看&#xf0e0;"/>
+        android:text="自行车&#xf0e0;"/>
 
     <TextView
         android:textSize="80dp"
         android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="&#xf206;"/>
+
+    <TextView
+        android:textSize="80dp"
+        android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"

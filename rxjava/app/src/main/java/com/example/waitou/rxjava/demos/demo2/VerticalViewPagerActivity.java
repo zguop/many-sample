@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo2;
+package com.example.waitou.rxjava.demos.demo2;
 
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 
 import com.example.waitou.rxjava.*;
 import com.example.waitou.rxjava.base.BaseActivity;
-import com.example.waitou.rxjava.demo2.transforms.ZoomOutTransformer;
+import com.example.waitou.rxjava.demos.demo2.transforms.ZoomOutTransformer;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,10 +23,10 @@ import rx.android.schedulers.AndroidSchedulers;
 
 public class VerticalViewPagerActivity extends BaseActivity {
 
-    int[]    icon1 = {R.drawable.img5, R.drawable.img6, R.drawable.img7};
-    int[]    icon2 = {R.drawable.img7, R.drawable.img6, R.drawable.img5};
-    String[] text1 = {"美女1", "美女2", "美女3"};
-    String[] text2 = {"美女3", "美女2", "美女1"};
+    int[]    icon1 = {R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img5, R.drawable.img6, R.drawable.img7};
+    int[]    icon2 = {R.drawable.img7, R.drawable.img6, R.drawable.img5,R.drawable.img3,R.drawable.img2,R.drawable.img1};
+    String[] text1 = {"美女1", "美女2", "美女3","美女4", "美女5", "美女6"};
+    String[] text2 = {"美女6", "美女5", "美女4","美女3", "美女2", "美女1"};
 
     @BindView(R.id.loadingView)
     BounceLoadingView mBounceLoadingView;

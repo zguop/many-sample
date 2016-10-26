@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo2.transforms;
+package com.example.waitou.rxjava.demos.demo2.transforms;
 
 /**
  * Copyright (C) 2015 Kaelaela

@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demo2;
+package com.example.waitou.rxjava.demos.demo2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -43,7 +43,7 @@ public class RoundRectImageView extends ImageView {
         Drawable drawable = getDrawable();
         if (null != drawable) {
             Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
-            Bitmap b = getRoundBitmap(bitmap, 5);
+            Bitmap b = getRoundBitmap(bitmap, 20);
             @SuppressLint("DrawAllocation") final Rect rectSrc = new Rect(0, 0, b.getWidth(), b.getHeight());
             @SuppressLint("DrawAllocation") final Rect rectDest = new Rect(0,0,getWidth(),getHeight());
             paint.reset();
