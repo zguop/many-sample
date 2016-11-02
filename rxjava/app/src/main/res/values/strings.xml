@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RxJava</string>
+
+    <string name="android_names">Android Version Names</string>
+    <string-array name="android_version_names">
+        <item>Ice Cream Sandwich</item>
+        <item>Jelly Bean</item>
+        <item>KitKat</item>
+        <item>Lollipop</item>
+    </string-array>
 </resources>

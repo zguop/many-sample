@@ -12,27 +12,38 @@
 
     <TextView
         android:id="@+id/tv1"
-        android:textSize="40dp"
-        android:textColor="#F00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="自行车&#xf0e0;"/>
+        android:text="&#xf0e0;"
+        android:textColor="#F00"
+        android:textSize="40dp"/>
 
     <TextView
-        android:textSize="80dp"
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="&#xf206;"/>
+        android:text="自行车&#xf206;"
+        android:textColor="#c78d36"
+        android:textSize="30dp"/>
 
     <TextView
-        android:textSize="80dp"
         android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="&#xf206;"/>
+        android:text="相机&#xf083;"
+        android:textColor="#14d3ec"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="&#xf113;"
+        android:textColor="#ec1487"
+        android:textSize="40dp"/>
 
 </LinearLayout>

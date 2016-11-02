@@ -3,14 +3,16 @@ package com.example.waitou.rxjava;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.waitou.rxjava.base.BaseActivity;
 import com.example.waitou.rxjava.demos.demo1.ExpandableListViewActivity;
 import com.example.waitou.rxjava.demos.demo2.VerticalViewPagerActivity;
-import com.example.waitou.rxjava.demos.demo3.LieActivity;
 import com.example.waitou.rxjava.demos.demo4.RecycleViewActivity;
 import com.example.waitou.rxjava.demos.demo5.AnimationsActivity;
 import com.example.waitou.rxjava.demos.demo6.ExpandableActivity;
+import com.example.waitou.rxjava.demos.expandablerecycler.ExpandableRecyclerActivity;
+import com.example.waitou.rxjava.demos.expandableview_demo8.ExpandableViewActivity;
 import com.example.waitou.rxjava.dialog.MyDialog;
 import com.example.waitou.rxjava.main.FontHelper;
 
@@ -22,6 +24,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TextView mTv1;
     private TextView mTv2;
     private TextView mTv3;
+    private TextView mTv4;
 
 
     @Override
@@ -32,11 +35,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mTv1 = (TextView) findViewById(R.id.tv1);
         mTv2 = (TextView) findViewById(R.id.tv2);
         mTv3 = (TextView) findViewById(R.id.tv3);
+        mTv4 = (TextView) findViewById(R.id.tv4);
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
         mTv3.setOnClickListener(this);
-       // fromJson();
-       // toJson();
+        mTv4.setOnClickListener(this);
+        // fromJson();
+        // toJson();
     }
 
     @Override
@@ -64,11 +69,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } else if (view == mTv2) {
             new MyDialog(this)
                     .setAnimation(Effectstype.Sidefill)
-                    .leftButton("demo3", () -> gotoActivity(LieActivity.class))
+                    .leftButton("demo3", () -> gotoActivity(ExpandableRecyclerActivity.class))
                     .rightButton("demo4", () -> gotoActivity(RecycleViewActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
-        }else if(view == mTv3){
+        } else if (view == mTv3) {
             new MyDialog(this)
                     .setImageIcon(R.drawable.img6)
                     .setAnimation(Effectstype.Flipv)
@@ -76,10 +81,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .rightButton("demo6", () -> gotoActivity(ExpandableActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
+        }else if(view == mTv4){
+            new MyDialog(this)
+                    .setImageIcon(R.drawable.img7)
+                    .setAnimation(Effectstype.Fadein)
+                    .leftButton("demo7", () -> Toast.makeText(MainActivity.this,"暂无",Toast.LENGTH_SHORT).show())
+                    .rightButton("demo8", () -> gotoActivity(ExpandableViewActivity.class))
+                    .leftIcon(R.drawable.icon)
+                    .show();
         }
     }
 
-    public void fromJson(){
+    public void fromJson() {
 //        Gson gson = new Gson();
 //        int i = gson.fromJson("100", int.class);
 //        double d = gson.fromJson("\"9.9\"", double.class);
@@ -145,7 +158,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     }
 
-    public void toJson(){
+    public void toJson() {
 //        Gson gson = new Gson();
 //        String num = gson.toJson(100);
 //        String bool = gson.toJson(false);

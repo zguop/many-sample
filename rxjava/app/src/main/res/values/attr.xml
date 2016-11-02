@@ -36,10 +36,15 @@
     <declare-styleable name="nestFullFlexboxLayout">
         <attr name="nest_expanded" format="boolean"/>
         <attr name="nest_duration" format="integer" />
+    </declare-styleable>
 
 
-
-
+    <declare-styleable name="DotTipTextView">
+        <attr name="dotTipsVisibility">
+            <enum name="invisible" value="0"/>
+            <enum name="visible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
     </declare-styleable>
 
 </resources>

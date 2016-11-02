@@ -3,6 +3,7 @@
           package="com.example.waitou.rxjava">
 
     <application
+        android:name=".RApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,6 +22,8 @@
         <activity android:name=".demos.demo2.VerticalViewPagerActivity"/>
         <activity android:name=".demos.demo5.AnimationsActivity"/>
         <activity android:name=".demos.demo6.ExpandableActivity"/>
+        <activity android:name=".demos.expandablerecycler.ExpandableRecyclerActivity"/>
+        <activity android:name=".demos.expandableview_demo8.ExpandableViewActivity"/>
     </application>
 
 </manifest>

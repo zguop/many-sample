@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.DisplayMetrics;
 
 import com.example.waitou.rxjava.R;
@@ -118,6 +119,12 @@ public abstract class BaseActivity extends FragmentActivity {
      * 获取Bundle 可选
      */
     protected void getBundleExtras(Bundle extras){}
+
+
+    protected LinearLayoutManager getLinearLayoutManager(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        return linearLayoutManager;
+    }
 
     /**
      * 页面跳转方法
