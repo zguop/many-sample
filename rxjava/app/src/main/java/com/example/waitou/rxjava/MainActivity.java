@@ -11,7 +11,7 @@ import com.example.waitou.rxjava.demos.demo2.VerticalViewPagerActivity;
 import com.example.waitou.rxjava.demos.demo4.RecycleViewActivity;
 import com.example.waitou.rxjava.demos.demo5.AnimationsActivity;
 import com.example.waitou.rxjava.demos.demo6.ExpandableActivity;
-import com.example.waitou.rxjava.demos.expandablerecycler.ExpandableRecyclerActivity;
+import com.example.waitou.rxjava.demos.expandablerecycler_demo7.ExpandableRecyclerActivity;
 import com.example.waitou.rxjava.demos.expandableview_demo8.ExpandableViewActivity;
 import com.example.waitou.rxjava.dialog.MyDialog;
 import com.example.waitou.rxjava.main.FontHelper;

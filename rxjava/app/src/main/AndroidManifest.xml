@@ -22,7 +22,7 @@
         <activity android:name=".demos.demo2.VerticalViewPagerActivity"/>
         <activity android:name=".demos.demo5.AnimationsActivity"/>
         <activity android:name=".demos.demo6.ExpandableActivity"/>
-        <activity android:name=".demos.expandablerecycler.ExpandableRecyclerActivity"/>
+        <activity android:name=".demos.expandablerecycler_demo7.ExpandableRecyclerActivity"/>
         <activity android:name=".demos.expandableview_demo8.ExpandableViewActivity"/>
     </application>
 

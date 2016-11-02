@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demos.expandablerecycler;
+package com.example.waitou.rxjava.demos.expandablerecycler_demo7;
 
 /**
  * Created by stelian on 25/09/2016.

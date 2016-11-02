@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demos.expandablerecycler;
+package com.example.waitou.rxjava.demos.expandablerecycler_demo7;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demos.expandablerecycler;
+package com.example.waitou.rxjava.demos.expandablerecycler_demo7;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.example.waitou.rxjava.demos.expandablerecycler;
+package com.example.waitou.rxjava.demos.expandablerecycler_demo7;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
