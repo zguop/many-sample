@@ -39,12 +39,31 @@
     </declare-styleable>
 
 
+    <declare-styleable name="expandableView">
+        <attr name="exp_mobile" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="buttom" value="1"/>
+        </attr>
+        <attr name="exp_duration" format="integer" />
+    </declare-styleable>
+
+
     <declare-styleable name="DotTipTextView">
         <attr name="dotTipsVisibility">
             <enum name="invisible" value="0"/>
             <enum name="visible" value="1"/>
             <enum name="gone" value="2"/>
         </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundIndicatorView">
+        <!--最大数值-->
+        <attr name="maxNum" format="integer"/>
+        <!--圆盘起始角度-->
+        <attr name="startAngle" format="integer"/>
+        <!--圆盘扫过的角度-->
+        <attr name="sweepAngle" format="integer"/>
     </declare-styleable>
 
 </resources>

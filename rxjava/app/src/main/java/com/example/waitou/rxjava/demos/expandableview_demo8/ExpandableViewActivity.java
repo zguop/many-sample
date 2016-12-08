@@ -1,6 +1,5 @@
 package com.example.waitou.rxjava.demos.expandableview_demo8;
 
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by waitou on 16/10/28.
@@ -21,7 +21,7 @@ import butterknife.BindView;
 public class ExpandableViewActivity extends BaseActivity {
 
     private String[] modelName  = {"ALFA", "V8","CM", "DPPPP"};
-    private String[] uniques = {"444", "AAA", "BBBB", "444", "444", "444"};
+    private String[] uniques = {"444","奔驰2015款 改款 E260L运动型1白很长的话就另起一行（白／白）5辆","444","444","444"};
 
     @BindView(R.id.flex_label)
     NestFullFlexboxLayout mNestFullFlexboxLayout;
@@ -44,10 +44,24 @@ public class ExpandableViewActivity extends BaseActivity {
         return R.layout.activity_exp_view;
     }
 
+    @OnClick(R.id.btn1)
+    public void btn1(){
+        UniquesInfo uniquesInfo =  new UniquesInfo();
+        uniquesInfo.snap = "哒哒哒";
+        mInfos.get(0).uniques.add(uniquesInfo);
+        setView();
+    }
+
+    @OnClick(R.id.btn2)
+    public void btn2(){
+        mInfos.get(0).uniques.remove( mInfos.get(0).uniques.size() - 1);
+        setView();
+    }
+
 
     @Override
     protected void initData() {
-        for (int i = 0; i < modelName.length; i++) {
+        for (int i = 0; i < 1; i++) {
             QueryInfo queryInfo = new QueryInfo();
             queryInfo.finished = false;
             queryInfo.name = modelName[i];
@@ -62,38 +76,70 @@ public class ExpandableViewActivity extends BaseActivity {
             mInfos.add(queryInfo);
         }
 
+        setView();
 
+//       mExpandingList.getBoxLayout().setAdapter(R.layout.item_expandble_view, mInfos, new NestFullFlexboxLayout.OnBindDatas<QueryInfo>() {
+//
+//            @Override
+//            public void onBind(int pos, int itemCount, QueryInfo queryInfo, NestFullFlexboxLayout.NestFullViewHolder holder) {
+//                ExpandableView expandableView = holder.getView(R.id.item_expanble);
+//                expandableView.setAdpater(queryInfo.uniques, new ExpandableView.OnBindDatas() {
+//                    @Override
+//                    public int addClickView() {
+//                        return R.layout.item_expanble_querycar;
+//                    }
+//
+//                    @Override
+//                    public void onBindClickView(ExpandableView.ViewHolder clickHolder) {
+//                        ImageView view = clickHolder.getView(R.id.iv_arrow);
+//                        expandableView.setArrorAnimationView(view);
+//                    }
+//
+//                    @Override
+//                    public int addChildView() {
+//                        return R.layout.item_expanble_caruniques;
+//                    }
+//
+//                    @Override
+//                    public void onBindChildView(int pos, int itemCount, Object o, ExpandableView.ViewHolder holder) {
+//
+//                    }
+//
+//                    @Override
+//                    public boolean expandableUpdataView() {
+//                        return false;
+//                    }
+//                });
+//            }
+//
+//            @Override
+//            public void setLayoutParams(int pos, NestFullFlexboxLayout.NestFullViewHolder holder) {
+//
+//            }
+//        });
+
+
+        mRecyclerView.setLayoutManager(getLinearLayoutManager());
+        mRecyclerView.setAdapter(new ExpandableViewAdapter(this,mInfos));
+
+    }
+
+    private void setView() {
         mNestFullFlexboxLayout.setAdapter(R.layout.item_expandble_view, mInfos, new NestFullFlexboxLayout.OnBindDatas<QueryInfo>() {
 
             @Override
             public void onBind(int pos, int itemCount, QueryInfo queryInfo, NestFullFlexboxLayout.NestFullViewHolder holder) {
                 ExpandableView expandableView = holder.getView(R.id.item_expanble);
-                expandableView.setAdpater(queryInfo.uniques, new ExpandableView.OnBindDatas<UniquesInfo>() {
+                expandableView.setAdapter(queryInfo.uniques, new ExpandableView.OnBindListener<UniquesInfo>() {
                     @Override
                     public int addClickView() {
-                        return R.layout.item_expanble_querycar;
+                        return R.layout.item_arror;
                     }
 
                     @Override
                     public void onBindClickView(ExpandableView.ViewHolder clickHolder) {
-                        ImageView view = clickHolder.getView(R.id.iv_arrow);
-                        DotTipTextView tipTextView = clickHolder.getView(R.id.tv);
-                        View lineView = clickHolder.getView(R.id.line_view);
-
-                        tipTextView.setText(queryInfo.name);
-
-                        if (!queryInfo.finished) {
-                            tipTextView.setCircleVisibility(1);
-                        } else {
-                            tipTextView.setCircleVisibility(2);
-                        }
+                        ImageView view = clickHolder.getView(R.id.btn_fold);
                         expandableView.setArrorAnimationView(view);
-
-                        if (pos == itemCount - 1 && !expandableView.isExpandable()) {
-                            lineView.setVisibility(View.GONE);
-                        } else {
-                            lineView.setVisibility(View.VISIBLE);
-                        }
                     }
 
                     @Override
@@ -106,16 +152,13 @@ public class ExpandableViewActivity extends BaseActivity {
                         TextView tvRight = holder.getView(R.id.tv_right);
                         TextView tvLeft = holder.getView(R.id.tv_left);
                         View lineView = holder.getView(R.id.line_view);
-                        if (pos != itemCount - 1 && contentPos == contentCount - 1) {
-                            lineView.setVisibility(View.VISIBLE);
-                        } else {
-                            lineView.setVisibility(View.GONE);
-                        }
-                        boolean delivered = uniquesInfo.delivered;
-                        if (!delivered) {
-                            tvRight.setText("呵呵哒");
-                            tvRight.setTextColor(ActivityCompat.getColor(ExpandableViewActivity.this, R.color.orange_FF8903));
-                            tvLeft.setTextColor(ActivityCompat.getColor(ExpandableViewActivity.this, R.color.orange_FF8903));
+
+                        if(contentCount <= 4){
+                            expandableView.setClickableVisibility(View.GONE);
+                            expandableView.setKeepChild(contentCount);
+                        }else {
+                            expandableView.setClickableVisibility(View.VISIBLE);
+                            expandableView.setKeepChild(2);
                         }
                         tvLeft.setText(uniquesInfo.snap);
                     }
@@ -134,51 +177,5 @@ public class ExpandableViewActivity extends BaseActivity {
 
             }
         });
-
-
-       mExpandingList.getBoxLayout().setAdapter(R.layout.item_expandble_view, mInfos, new NestFullFlexboxLayout.OnBindDatas<QueryInfo>() {
-
-            @Override
-            public void onBind(int pos, int itemCount, QueryInfo queryInfo, NestFullFlexboxLayout.NestFullViewHolder holder) {
-                ExpandableView expandableView = holder.getView(R.id.item_expanble);
-                expandableView.setAdpater(queryInfo.uniques, new ExpandableView.OnBindDatas() {
-                    @Override
-                    public int addClickView() {
-                        return R.layout.item_expanble_querycar;
-                    }
-
-                    @Override
-                    public void onBindClickView(ExpandableView.ViewHolder clickHolder) {
-                        ImageView view = clickHolder.getView(R.id.iv_arrow);
-                        expandableView.setArrorAnimationView(view);
-                    }
-
-                    @Override
-                    public int addChildView() {
-                        return R.layout.item_expanble_caruniques;
-                    }
-
-                    @Override
-                    public void onBindChildView(int pos, int itemCount, Object o, ExpandableView.ViewHolder holder) {
-
-                    }
-
-                    @Override
-                    public boolean expandableUpdataView() {
-                        return false;
-                    }
-                });
-            }
-
-            @Override
-            public void setLayoutParams(int pos, NestFullFlexboxLayout.NestFullViewHolder holder) {
-
-            }
-        });
-
-
-        mRecyclerView.setLayoutManager(getLinearLayoutManager());
-        mRecyclerView.setAdapter(new ExpandableViewAdapter(this,mInfos));
-
     }
 }

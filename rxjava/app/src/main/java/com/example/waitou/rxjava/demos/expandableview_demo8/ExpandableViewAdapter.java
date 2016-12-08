@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.waitou.rxjava.R;
@@ -43,8 +42,7 @@ public class ExpandableViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ViewHolder holder1 = (ViewHolder) holder;
         QueryInfo queryInfo = mInfos.get(position);
-
-        holder1.mExpandingList.setAdpater(queryInfo.uniques, new ExpandableView.OnBindDatas<UniquesInfo>() {
+        holder1.mExpandingList.setAdapter(queryInfo.uniques, new ExpandableView.OnBindListener<UniquesInfo>() {
             @Override
             public int addClickView() {
                 return R.layout.item_expanble_querycar;
@@ -52,24 +50,7 @@ public class ExpandableViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
             @Override
             public void onBindClickView(ExpandableView.ViewHolder clickHolder) {
-                ImageView view = clickHolder.getView(R.id.iv_arrow);
-                DotTipTextView tipTextView = clickHolder.getView(R.id.tv);
-                View lineView = clickHolder.getView(R.id.line_view);
 
-                tipTextView.setText(queryInfo.name);
-
-                if (!queryInfo.finished) {
-                    tipTextView.setCircleVisibility(1);
-                } else {
-                    tipTextView.setCircleVisibility(2);
-                }
-                holder1.mExpandingList.setArrorAnimationView(view);
-
-                if (position == getItemCount() - 1 && !holder1.mExpandingList.isExpandable()) {
-                    lineView.setVisibility(View.GONE);
-                } else {
-                    lineView.setVisibility(View.VISIBLE);
-                }
             }
 
             @Override
@@ -101,6 +82,53 @@ public class ExpandableViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 return true;
             }
         });
+
+
+
+        //        holder1.mExpandingList.setAdapter(R.layout.item_expandble_view, mInfos, new NestFullFlexboxLayout.OnBindDatas<QueryInfo>() {
+//
+//            @Override
+//            public void onBind(int pos, int itemCount, QueryInfo queryInfo, NestFullFlexboxLayout.NestFullViewHolder holder) {
+//                ExpandableView expandableView = holder.getView(R.id.item_expanble);
+//                expandableView.setAdpater(queryInfo.uniques, new ExpandableView.OnBindDatas<UniquesInfo>() {
+//                    @Override
+//                    public int addClickView() {
+//                        return R.layout.item_arror;
+//                    }
+//
+//                    @Override
+//                    public void onBindClickView(ExpandableView.ViewHolder clickHolder) {
+//                        ImageView view = clickHolder.getView(R.id.btn_fold);
+//                        expandableView.setArrorAnimationView(view);
+//
+//                    }
+//
+//                    @Override
+//                    public int addChildView() {
+//                        return R.layout.item_car_type;
+//                    }
+//
+//                    @Override
+//                    public void onBindChildView(int ChildPos, int ChildCount, UniquesInfo uniquesInfo, ExpandableView.ViewHolder childHolder) {
+//                        TextView tvLeft = childHolder.getView(R.id.tv_name);
+//
+//                        tvLeft.setText(uniquesInfo.snap);
+//                    }
+//
+//                    @Override
+//                    public boolean expandableUpdataView() {
+//                        return true;
+//                    }
+//                });
+//
+//            }
+//
+//            @Override
+//            public void setLayoutParams(int pos, NestFullFlexboxLayout.NestFullViewHolder holder) {
+//
+//            }
+//        });
+
     }
 
     @Override

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:tools="http://schemas.android.com/tools"
+           android:id="@+id/btn_fold"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:scaleType="centerInside"
+           android:src="@drawable/ic_expand_more"
+           android:visibility="visible"
+           tools:visibility="visible"/>

@@ -24,6 +24,11 @@
         <activity android:name=".demos.demo6.ExpandableActivity"/>
         <activity android:name=".demos.expandablerecycler_demo7.ExpandableRecyclerActivity"/>
         <activity android:name=".demos.expandableview_demo8.ExpandableViewActivity"/>
+        <activity android:name=".roundlndicator.RoundIndicatorActivity"/>
+        <activity android:name=".gesture_scroller.scroller.ScrollerActivity"/>
+        <activity android:name=".gesture_scroller.gesture.GestureDetectorActivity"/>
+
+
     </application>
 
 </manifest>

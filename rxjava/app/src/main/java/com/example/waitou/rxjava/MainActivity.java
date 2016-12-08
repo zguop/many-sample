@@ -1,9 +1,9 @@
 package com.example.waitou.rxjava;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.waitou.rxjava.base.BaseActivity;
 import com.example.waitou.rxjava.demos.demo1.ExpandableListViewActivity;
@@ -14,7 +14,10 @@ import com.example.waitou.rxjava.demos.demo6.ExpandableActivity;
 import com.example.waitou.rxjava.demos.expandablerecycler_demo7.ExpandableRecyclerActivity;
 import com.example.waitou.rxjava.demos.expandableview_demo8.ExpandableViewActivity;
 import com.example.waitou.rxjava.dialog.MyDialog;
+import com.example.waitou.rxjava.gesture_scroller.gesture.GestureDetectorActivity;
+import com.example.waitou.rxjava.gesture_scroller.scroller.ScrollerActivity;
 import com.example.waitou.rxjava.main.FontHelper;
+import com.example.waitou.rxjava.roundlndicator.RoundIndicatorActivity;
 
 import dawanju.waitou.wtlibrary.BaseDialog;
 import dawanju.waitou.wtlibrary.Effectstype;
@@ -25,6 +28,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TextView mTv2;
     private TextView mTv3;
     private TextView mTv4;
+    private TextView mTv5;
 
 
     @Override
@@ -36,12 +40,27 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mTv2 = (TextView) findViewById(R.id.tv2);
         mTv3 = (TextView) findViewById(R.id.tv3);
         mTv4 = (TextView) findViewById(R.id.tv4);
+        mTv5 = (TextView) findViewById(R.id.tv5);
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
         mTv3.setOnClickListener(this);
         mTv4.setOnClickListener(this);
+        mTv5.setOnClickListener(this);
         // fromJson();
         // toJson();
+
+        new AnimatedZoomRunnable();
+    }
+
+
+    private class AnimatedZoomRunnable implements Runnable {
+
+        @Override
+        public void run() {
+            Log.i("aa" , "   diaoyonel ma ");
+        }
+
+
     }
 
     @Override
@@ -85,8 +104,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             new MyDialog(this)
                     .setImageIcon(R.drawable.img7)
                     .setAnimation(Effectstype.Fadein)
-                    .leftButton("demo7", () -> Toast.makeText(MainActivity.this,"暂无",Toast.LENGTH_SHORT).show())
-                    .rightButton("demo8", () -> gotoActivity(ExpandableViewActivity.class))
+                    .leftButton("RoundIndicator", () -> gotoActivity(RoundIndicatorActivity.class))
+                    .rightButton("Expandable", () -> gotoActivity(ExpandableViewActivity.class))
+                    .leftIcon(R.drawable.icon)
+                    .show();
+        }else if(view == mTv5){
+            new MyDialog(this)
+                    .setImageIcon(R.drawable.img2)
+                    .setAnimation(Effectstype.Slit)
+                    .leftButton("scroller", () -> gotoActivity(ScrollerActivity.class))
+                    .rightButton("Gesture", () -> gotoActivity(GestureDetectorActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
         }
