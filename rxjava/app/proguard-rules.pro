@@ -15,3 +15,16 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keepclassmembers public class * extends android.view.View {
+    void set*(%);
+    void set*(%, %);
+    void set*(%, %, %, %);
+    void set*(%[]);
+    void set*(**[]);
+    void set*(!**Listener);
+
+    % get*();
+    %[] get*();
+    **[] get*();
+    !**Listener get*();
+}

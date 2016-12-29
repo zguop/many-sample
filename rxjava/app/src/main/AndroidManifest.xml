@@ -3,6 +3,7 @@
           package="com.example.waitou.rxjava">
 
     <application
+
         android:name=".RApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,8 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".demos.demo4.RecycleViewActivity"/>
-        <activity android:name=".demos.demo3.LieActivity"/>
         <activity android:name=".demos.demo1.ExpandableListViewActivity"/>
         <activity android:name=".demos.demo2.VerticalViewPagerActivity"/>
         <activity android:name=".demos.demo5.AnimationsActivity"/>
@@ -27,7 +26,16 @@
         <activity android:name=".roundlndicator.RoundIndicatorActivity"/>
         <activity android:name=".gesture_scroller.scroller.ScrollerActivity"/>
         <activity android:name=".gesture_scroller.gesture.GestureDetectorActivity"/>
-
+        <activity android:name=".demos.transition.TransitionActivity"/>
+        <activity android:name=".demos.transition.MessageActivity"/>
+        <activity android:name=".design.DesignActivity"/>
+        <activity android:name=".databinding.DataActivity"/>
+        <activity android:name=".databinding.AnimationActivity"/>
+        <activity android:name=".databinding.LambdaActivity"/>
+        <activity android:name=".databinding.ListDataActivity"/>
+        <activity android:name=".databinding.TwoWayActivity"/>
+        <activity android:name=".databinding.ExpressionActivity"/>
+        <activity android:name=".databinding.SimpleActivity"/>
 
     </application>
 

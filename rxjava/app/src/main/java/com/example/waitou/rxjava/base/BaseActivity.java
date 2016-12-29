@@ -3,7 +3,7 @@ package com.example.waitou.rxjava.base;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.DisplayMetrics;
 
@@ -20,7 +20,7 @@ import rx.subscriptions.CompositeSubscription;
  * date     2016/7/2 14:04
  * des      baseActivity基类,可扩展
  */
-public abstract class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected final CompositeSubscription mPendingSubscriptions = new CompositeSubscription();
     protected Subscription mSubscription;

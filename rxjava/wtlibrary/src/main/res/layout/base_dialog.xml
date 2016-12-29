@@ -47,7 +47,7 @@
         android:id="@+id/base_dialog_centent_framelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+       >
 
         <TextView
             android:id="@+id/base_dialog_centent_des"

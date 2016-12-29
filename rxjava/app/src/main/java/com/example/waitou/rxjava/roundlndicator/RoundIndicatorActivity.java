@@ -36,10 +36,10 @@ public class RoundIndicatorActivity extends BaseActivity {
     protected void initData() {
         roundIndicatorView = (RoundIndicatorView) findViewById(R.id.my_view);
 
-        roundIndicatorView.setDrawCanArrival(0);
+        roundIndicatorView.setDrawCanArrival(1);
         mSubscription = Observable.timer(100, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
                 .subscribe(res -> {
-                    roundIndicatorView.setCurrentNumAnim(100);
+                    roundIndicatorView.setCurrentNumAnim(1000,null);
                 });
         mPendingSubscriptions.add(mSubscription);
 
@@ -49,7 +49,7 @@ public class RoundIndicatorActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 int a =Integer.valueOf(editText.getText().toString());
-                roundIndicatorView.setCurrentNumAnim(a);
+                roundIndicatorView.setCurrentNumAnim(a,null);
             }
         });
     }

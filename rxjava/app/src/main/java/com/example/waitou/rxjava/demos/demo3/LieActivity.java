@@ -2,7 +2,7 @@ package com.example.waitou.rxjava.demos.demo3;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
 /**
  * Created by waitou on 16/9/19.
  */
-public class LieActivity extends AppCompatActivity {
+public class LieActivity extends FragmentActivity {
 
     private ListView mListView;
 

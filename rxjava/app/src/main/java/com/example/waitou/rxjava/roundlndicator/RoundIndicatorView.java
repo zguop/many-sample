@@ -11,10 +11,13 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.SweepGradient;
+import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 
 import com.example.waitou.rxjava.R;
 
@@ -49,6 +52,11 @@ public class RoundIndicatorView extends View {
     private RectF                    inRectF;
     private RectF                    outRectF;
 
+    private int                      num;
+    private RoundIndicatorAnim       mRoundIndicatorAnim;
+
+
+
     public RoundIndicatorView(Context context) {
         this(context, null);
     }
@@ -62,15 +70,40 @@ public class RoundIndicatorView extends View {
         this.context = context;
         initAttr(attrs);
         initPaint();
+        mRoundIndicatorAnim = new RoundIndicatorAnim();
+    }
+
+    public void setCurrentNumAnim(int num, OnCalculateColorListener listener) {
+        this.num = num;
+        this.mOnCalculateColorListener = listener;
+        if (mRoundIndicatorAnim != null) {
+            clearAnimation();
+            long duration = Math.abs(num - currentNum) / maxNum * 1500 + 500; //根据进度差计算动画时间
+            mRoundIndicatorAnim.setDuration(Math.min(duration, 2000));
+            startAnimation(mRoundIndicatorAnim);
+        }
+    }
+
+    private class RoundIndicatorAnim extends Animation {
+        @Override
+        protected void applyTransformation(float interpolatedTime, Transformation t) {
+            super.applyTransformation(interpolatedTime, t);
+            currentNum = (int) (num * interpolatedTime);
+            ViewCompat.postInvalidateOnAnimation(RoundIndicatorView.this);
+            if (mOnCalculateColorListener != null) {
+                int color = calculateColor(currentNum);
+                mOnCalculateColorListener.calculateColor(color);
+            }
+        }
     }
 
     public void setCurrentNumAnim(int num) {
         float duration = (float) Math.abs(num - currentNum) / maxNum * 50 + 1800; //根据进度差计算动画时间
-        Log.i("aa", " duration" + duration);
         ObjectAnimator anim = ObjectAnimator.ofInt(this, "currentNum", num);
         anim.setDuration((long) Math.min(duration, 2500));
         anim.addUpdateListener(animation -> {
             int value = (int) animation.getAnimatedValue();
+            Log.i("aa" , " v " + value);
             int color = calculateColor(value);
             if (mOnCalculateColorListener != null) {
                 mOnCalculateColorListener.calculateColor(color);
