@@ -2,20 +2,10 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
-        <variable
-            name="employee"
-            type="com.example.waitou.rxjava.databinding.info.Employee"/>
 
-        <variable
-            name="simpePresenter"
-            type="com.example.waitou.rxjava.databinding.persenter.SimplePresenter"/>
-
-    </data>
 
 
     <LinearLayout
-        android:onClick="@{simpePresenter.onClick}"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="#ffffff"
@@ -27,7 +17,6 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:gravity="center_vertical"
-            android:text="@{employee.lastName}"
             android:textColor="#f00"
             android:textSize="14dp"/>
 

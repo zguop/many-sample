@@ -2,40 +2,38 @@
 <resources>
 
     <declare-styleable name="ViewPagerIndicator">
-        <attr name="item_count" format="integer" />
+        <attr name="item_count" format="integer"/>
     </declare-styleable>
 
 
     <declare-styleable name="expandableLayout">
-        <attr name="ael_duration" format="integer" />
-        <attr name="ael_expanded" format="boolean" />
-        <attr name="ael_defaultChildIndex" format="integer" />
-        <attr name="ael_defaultPosition" format="dimension" />
+        <attr name="ael_duration" format="integer"/>
+        <attr name="ael_expanded" format="boolean"/>
+        <attr name="ael_defaultChildIndex" format="integer"/>
+        <attr name="ael_defaultPosition" format="dimension"/>
         <attr name="ael_orientation" format="enum">
-            <enum name="horizontal" value="0" />
-            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
         </attr>
         <attr name="ael_interpolator" format="enum">
-            <enum name="accelerateDecelerate" value="0" />
-            <enum name="accelerate" value="1" />
-            <enum name="anticipate" value="2" />
-            <enum name="anticipateOvershoot" value="3" />
-            <enum name="bounce" value="4" />
-            <enum name="decelerate" value="5" />
-            <enum name="fastOutLinearIn" value="6" />
-            <enum name="fastOutSlowIn" value="7" />
-            <enum name="linear" value="8" />
-            <enum name="linearOutSlowIn" value="9" />
-            <enum name="overshoot" value="10" />
+            <enum name="accelerateDecelerate" value="0"/>
+            <enum name="accelerate" value="1"/>
+            <enum name="anticipate" value="2"/>
+            <enum name="anticipateOvershoot" value="3"/>
+            <enum name="bounce" value="4"/>
+            <enum name="decelerate" value="5"/>
+            <enum name="fastOutLinearIn" value="6"/>
+            <enum name="fastOutSlowIn" value="7"/>
+            <enum name="linear" value="8"/>
+            <enum name="linearOutSlowIn" value="9"/>
+            <enum name="overshoot" value="10"/>
         </attr>
     </declare-styleable>
 
 
-
-
     <declare-styleable name="nestFullFlexboxLayout">
         <attr name="nest_expanded" format="boolean"/>
-        <attr name="nest_duration" format="integer" />
+        <attr name="nest_duration" format="integer"/>
     </declare-styleable>
 
 
@@ -44,7 +42,7 @@
             <enum name="top" value="0"/>
             <enum name="buttom" value="1"/>
         </attr>
-        <attr name="exp_duration" format="integer" />
+        <attr name="exp_duration" format="integer"/>
     </declare-styleable>
 
 
@@ -67,18 +65,35 @@
     </declare-styleable>
 
     <declare-styleable name="LoadingView">
-        <attr name="loadding_color" format="color" />
+        <attr name="loadding_color" format="color"/>
         <attr name="ring_style" format="enum">
-            <enum name="square" value="0" />
-            <enum name="round" value="1" />
+            <enum name="square" value="0"/>
+            <enum name="round" value="1"/>
         </attr>
         <attr name="progress_style" format="enum">
-            <enum name="material" value="0" />
-            <enum name="linear" value="1" />
+            <enum name="material" value="0"/>
+            <enum name="linear" value="1"/>
         </attr>
 
-        <attr name="ring_width" format="dimension" />
-        <attr name="ring_radius" format="dimension" />
+        <attr name="ring_width" format="dimension"/>
+        <attr name="ring_radius" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="playerview">
+        <attr name="cover" format="integer"/>
+        <attr name="buttonColor" format="color"/>
+        <attr name="progressEmptyColor" format="color"/>
+        <attr name="progressLoadedColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="QTContentLayout">
+        <attr name="cl_contentLayoutId" format="reference"/>
+        <attr name="cl_loadingLayoutId" format="reference"/>
+        <attr name="cl_emptyLayoutId" format="reference"/>
+        <attr name="cl_errorLayoutId" format="reference"/>
     </declare-styleable>
 
 </resources>

@@ -24,7 +24,7 @@ public class Utils {
      * @param context 上下文
      */
     public static void init(Context context) {
-        Utils.context = context.getApplicationContext();
+        Utils.context = context;
     }
 
     /**

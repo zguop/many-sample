@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/backup"
+        android:icon="@drawable/ic_backup"
+        android:title="Backup"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings"
+        android:title="Setting"
+        app:showAsAction="never"/>
+
+    <!-- app:showAsAction="always"
+    来指定按钮显示的位置，使用app属性是为了能够兼容老版本
+    它的可选值：always：表示永远显示在toolbar中，如果屏幕空间不够则不显示
+    ifRoom：表示屏幕空间足够的情况下显示在toolbar中，不够的话就显示在菜单中
+    never：则表示永远显示在菜单当中，
+    注意，toolbar中的action按钮只会显示图片，菜单中的action按钮只会显示文字-->
+</menu>

@@ -15,8 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.waitou.rxjava.base.BaseActivity;
-import com.example.waitou.rxjava.databinding.DataActivity;
-import com.example.waitou.rxjava.demos.demo1.ExpandableListViewActivity;
+import com.example.waitou.rxjava.contentlayout.ContenLayouttActivity;
 import com.example.waitou.rxjava.demos.demo2.VerticalViewPagerActivity;
 import com.example.waitou.rxjava.demos.demo5.AnimationsActivity;
 import com.example.waitou.rxjava.demos.demo6.ExpandableActivity;
@@ -28,6 +27,7 @@ import com.example.waitou.rxjava.dialog.MyDialog;
 import com.example.waitou.rxjava.gesture_scroller.gesture.GestureDetectorActivity;
 import com.example.waitou.rxjava.gesture_scroller.scroller.ScrollerActivity;
 import com.example.waitou.rxjava.main.FontHelper;
+import com.example.waitou.rxjava.music.AudioFxActivity;
 import com.example.waitou.rxjava.roundlndicator.RoundIndicatorActivity;
 
 import java.io.File;
@@ -127,7 +127,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .titleDes("我是标题栏")
                     .titleIcon(R.drawable.icon)
                     .contentDes("我是内容栏")
-                    .leftButton("demo1", () -> gotoActivity(ExpandableListViewActivity.class))
+                    .leftButton("contentlayout", () -> gotoActivity(ContenLayouttActivity.class))
                     .rightButton("demo2", () -> gotoActivity(VerticalViewPagerActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
@@ -135,7 +135,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             new MyDialog(this)
                     .setAnimation(Effectstype.Sidefill)
                     .leftButton("demo3", () -> gotoActivity(ExpandableRecyclerActivity.class))
-                    .rightButton("demo4", null)
+                    .rightButton("music", () -> gotoActivity(AudioFxActivity.class))
                     .leftIcon(R.drawable.icon)
                     .show();
         } else if (view == mTv3) {
@@ -173,7 +173,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } else if (view == mTv7) {
             gotoActivity(DesignActivity.class);
         } else if(view == mTv8){
-            gotoActivity(DataActivity.class);
         }
     }
 

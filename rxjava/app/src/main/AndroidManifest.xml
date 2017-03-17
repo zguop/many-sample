@@ -2,41 +2,76 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.waitou.rxjava">
 
-    <application
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
+
+    <application
         android:name=".RApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".demos.demo1.ExpandableListViewActivity"/>
-        <activity android:name=".demos.demo2.VerticalViewPagerActivity"/>
-        <activity android:name=".demos.demo5.AnimationsActivity"/>
-        <activity android:name=".demos.demo6.ExpandableActivity"/>
-        <activity android:name=".demos.expandablerecycler_demo7.ExpandableRecyclerActivity"/>
-        <activity android:name=".demos.expandableview_demo8.ExpandableViewActivity"/>
-        <activity android:name=".roundlndicator.RoundIndicatorActivity"/>
-        <activity android:name=".gesture_scroller.scroller.ScrollerActivity"/>
-        <activity android:name=".gesture_scroller.gesture.GestureDetectorActivity"/>
-        <activity android:name=".demos.transition.TransitionActivity"/>
-        <activity android:name=".demos.transition.MessageActivity"/>
-        <activity android:name=".design.DesignActivity"/>
-        <activity android:name=".databinding.DataActivity"/>
-        <activity android:name=".databinding.AnimationActivity"/>
-        <activity android:name=".databinding.LambdaActivity"/>
-        <activity android:name=".databinding.ListDataActivity"/>
-        <activity android:name=".databinding.TwoWayActivity"/>
-        <activity android:name=".databinding.ExpressionActivity"/>
-        <activity android:name=".databinding.SimpleActivity"/>
-
+        <activity
+            android:name=".demos.demo1.ExpandableListViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.demo2.VerticalViewPagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.demo5.AnimationsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.demo6.ExpandableActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.expandablerecycler_demo7.ExpandableRecyclerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.expandableview_demo8.ExpandableViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".roundlndicator.RoundIndicatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".gesture_scroller.scroller.ScrollerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".gesture_scroller.gesture.GestureDetectorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.transition.TransitionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demos.transition.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".design.DesignActivity"
+            android:label="Fruits"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".design.FruitActivity"
+            android:theme="@style/FruitActivityTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".music.MusicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".music.AudioFxActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".contentlayout.ContenLayouttActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

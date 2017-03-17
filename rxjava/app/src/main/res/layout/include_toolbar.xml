@@ -6,6 +6,7 @@
                                    android:layout_height="?android:attr/actionBarSize"
                                    android:background="?android:attr/colorPrimary"
                                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                                   app:layout_scrollFlags="scroll|enterAlways|snap"
                                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
@@ -15,3 +16,8 @@
     <!--？attr/colorPrimary 背景颜色使用 colorPrimary -->
     <!--@style/ThemeOverlay.AppCompat.Dark.ActionBar 设置toolbar主题，深色主题，-->
     <!--@style/ThemeOverlay.AppCompat.Light 设置菜单为淡色 主题-->
+    <!--当appbarLayout接收到滚动事件的时候，它内部的子空间其实是可以指定如何去影响这些事件的，通过app：layout_scrollFlags属性就能实现-->
+    <!--这里在Toobar中添加了一个app：layout——fcrollFlags属性，并将这个属性的值指定成了scroll|enterAlways|snap。
+    其中,scroll表示当RecyclerView向上滚动的时候，ToolBar会跟着向上滚动并隐藏；
+    enterAlways表示当RecyclerView 向下滚动的时候，Toolbar会跟着向下滚动并重新显示。
+    snap表示当Toolbar还没有完全隐藏或者显示的时候，会根据当前滚动的距离，自动选择是隐藏还是显示-->

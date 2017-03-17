@@ -11,6 +11,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FruitActivityTheme" parent="AppTheme"/>
+
+
+
+
 
 
     <style name="Dialog_Tip" parent="@android:style/Theme.Dialog">

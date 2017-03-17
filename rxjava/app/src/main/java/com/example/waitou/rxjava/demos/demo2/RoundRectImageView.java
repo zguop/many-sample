@@ -32,7 +32,6 @@ public class RoundRectImageView extends ImageView {
     public RoundRectImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         paint = new Paint();
-
     }
 
     /**

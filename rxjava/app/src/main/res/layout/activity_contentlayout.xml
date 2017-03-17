@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_showLoading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="showLoading"/>
+
+
+        <Button
+            android:id="@+id/bt_showError"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#67665d"
+            android:text="showError"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_showEmpty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ab7865"
+            android:text="showEmpty"/>
+
+        <Button
+            android:id="@+id/bt_showContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#854678"
+            android:text="showContent"/>
+
+    </LinearLayout>
+
+    <com.example.waitou.rxjava.contentlayout.QTContentLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:cl_emptyLayoutId="@layout/view_empty"
+        app:cl_errorLayoutId="@layout/view_error"
+        app:cl_loadingLayoutId="@layout/view_loading">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#854678"
+            android:gravity="center"
+            android:text="content"
+            android:textSize="28sp"/>
+
+    </com.example.waitou.rxjava.contentlayout.QTContentLayout>
+
+
+</LinearLayout>

@@ -57,7 +57,7 @@ public class SpannableStringUtils {
         return new Builder(text);
     }
 
-    public static class Builder {
+    private static class Builder {
 
         private int defaultValue = 0x12000000;
         private CharSequence text;
