@@ -1,6 +1,5 @@
 package com.example.waitou.rxjava.gesture_scroller.gesture;
 
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -46,7 +45,6 @@ public class GestureDetectorActivity extends BaseActivity implements View.OnTouc
     @Override
     public boolean onTouch(View v, MotionEvent event) {
      //   mScaleGestureDetector.onTouchEvent(event);
-        Log.i("aa" , "  onTouch " );
         return mScaleGestureDetector.onTouchEvent(event);
     }
 }
