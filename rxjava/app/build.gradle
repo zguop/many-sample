@@ -7,17 +7,13 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.1'
-
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.waitou.rxjava"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         dataBinding {
@@ -47,24 +43,26 @@ android {
 
 
 dependencies {
-    compile project(':wtlibrary')
-    compile 'com.android.support:cardview-v7:25.1.0'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'io.reactivex:rxjava:1.1.5'
-    compile 'io.reactivex:rxandroid:1.0.1'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
-    compile 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
-    compile 'com.facebook.rebound:rebound:0.3.8'
-    compile 'com.google.android:flexbox:0.2.3'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.android.support:design:25.1.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(':wtlibrary')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'io.reactivex:rxjava:1.1.5'
+    implementation 'io.reactivex:rxandroid:1.0.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation 'com.google.android:flexbox:0.2.3'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 
 }

@@ -51,7 +51,7 @@ public class GestureListener extends GestureDetector.SimpleOnGestureListener {
      */
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        Log.i("aa", "onScroll distanceX = " + distanceX + " distanceX = " + distanceX);
+        Log.i("aa", "onScroll distanceX = " + distanceX + " distanceY = " + distanceY);
         return false;
     }
 

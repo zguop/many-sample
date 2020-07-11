@@ -8,5 +8,6 @@
     <color name="black_AFAFAF">#AFAFAF</color>
     <color name="orange_FF8903">#FF9003</color>
     <color name="reader_menu_bg_color">#191919</color>
+    <color name="transparent_80">#80000000</color>
 
 </resources>

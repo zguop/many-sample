@@ -8,6 +8,7 @@
 
 
     <com.example.waitou.rxjava.gesture_scroller.scroller.JellyTextView
+        android:id="@+id/text"
         android:textSize="40dp"
         android:background="#f00"
         android:layout_width="wrap_content"
@@ -31,21 +32,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <Button
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="This is first child view  1"/>
+            android:layout_height="200dp">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="This is second child view  2"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is first child view  1"/>
 
-        <Button
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is first child view  1"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="This is third child view  3"/>
+            android:layout_height="200dp">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is second child view  2"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is second child view  2"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is second child view  3"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="This is second child view  3"/>
+        </LinearLayout>
+
 
 
     </com.example.waitou.rxjava.gesture_scroller.scroller.ScrollerLayout>

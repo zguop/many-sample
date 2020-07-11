@@ -24,6 +24,7 @@ import com.example.waitou.rxjava.demos.expandableview_demo8.ExpandableViewActivi
 import com.example.waitou.rxjava.demos.transition.TransitionActivity;
 import com.example.waitou.rxjava.design.DesignActivity;
 import com.example.waitou.rxjava.dialog.MyDialog;
+import com.example.waitou.rxjava.dropdown.DropDownActivity;
 import com.example.waitou.rxjava.gesture_scroller.gesture.GestureDetectorActivity;
 import com.example.waitou.rxjava.gesture_scroller.scroller.ScrollerActivity;
 import com.example.waitou.rxjava.main.FontHelper;
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TextView mTv6;
     private TextView mTv7;
     private TextView mTv8;
+    private TextView mTv9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mTv6 = (TextView) findViewById(R.id.tv6);
         mTv7 = (TextView) findViewById(R.id.tv7);
         mTv8 = (TextView) findViewById(R.id.tv8);
+        mTv9 = findViewById(R.id.tv9);
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
         mTv3.setOnClickListener(this);
@@ -67,6 +70,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mTv6.setOnClickListener(this);
         mTv7.setOnClickListener(this);
         mTv8.setOnClickListener(this);
+        mTv9.setOnClickListener(this);
 
         LoadingView loadingView = (LoadingView) findViewById(R.id.loading);
         loadingView.setColor(ContextCompat.getColor(this, R.color.colorAccent));
@@ -171,8 +175,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .leftIcon(R.drawable.icon)
                     .show();
         } else if (view == mTv7) {
-            gotoActivity(DesignActivity.class);
-        } else if(view == mTv8){
+            new MyDialog(this)
+                    .setImageIcon(R.drawable.img5)
+                    .setAnimation(Effectstype.Slit)
+                    .leftButton("DesignActivity", () -> gotoActivity(DesignActivity.class))
+                    .rightButton("CircleActivity", () -> gotoActivity(CircleActivity.class))
+                    .leftIcon(R.drawable.icon)
+                    .show();
+        } else if (view == mTv8) {
+            gotoActivity(DropDownActivity.class);
+        } else if (view == mTv9) {
+
+
         }
     }
 

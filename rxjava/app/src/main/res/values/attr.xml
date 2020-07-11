@@ -96,4 +96,15 @@
         <attr name="cl_errorLayoutId" format="reference"/>
     </declare-styleable>
 
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="qy_bg_color" format="color"/>
+        <attr name="qy_radius" format="float"/>
+        <attr name="qy_point_color" format="color"/>
+        <attr name="qy_point_radius" format="float"/>
+        <attr name="qy_point_num" format="integer"/>
+        <attr name="qy_point_padding" format="dimension"/>
+
+
+    </declare-styleable>
 </resources>

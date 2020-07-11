@@ -45,6 +45,6 @@ public class GestureDetectorActivity extends BaseActivity implements View.OnTouc
     @Override
     public boolean onTouch(View v, MotionEvent event) {
      //   mScaleGestureDetector.onTouchEvent(event);
-        return mScaleGestureDetector.onTouchEvent(event);
+        return mGestureDetector.onTouchEvent(event);
     }
 }

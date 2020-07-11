@@ -28,7 +28,7 @@ public class JellyTextView extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
+            Log.e("aa", "onTouchEvent");
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 //第一次获取静止的坐标

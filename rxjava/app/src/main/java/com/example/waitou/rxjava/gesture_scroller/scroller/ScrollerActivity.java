@@ -1,5 +1,6 @@
 package com.example.waitou.rxjava.gesture_scroller.scroller;
 
+import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -21,7 +22,8 @@ public class ScrollerActivity extends BaseActivity {
     Button       mScrollByBtn;
     @BindView(R.id.parent)
     LinearLayout mParent;
-
+    @BindView(R.id.text)
+    JellyTextView mJellyTextView;
 
     @Override
     protected boolean isOverridePendingTransition() {
@@ -35,7 +37,10 @@ public class ScrollerActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        mJellyTextView.setOnTouchListener((v, event) -> {
+            Log.e("aa" , "onTouch");
+            return false;
+        });
 
     }
 

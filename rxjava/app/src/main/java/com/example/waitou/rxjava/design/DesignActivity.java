@@ -46,7 +46,12 @@ public class DesignActivity extends BaseActivity {
 
     @Override
     protected boolean isOverridePendingTransition() {
-        return false;
+        return true;
+    }
+
+    @Override
+    protected TransitionMode initOverridePendingTransitionModel() {
+        return TransitionMode.BOTTOM;
     }
 
     @Override
