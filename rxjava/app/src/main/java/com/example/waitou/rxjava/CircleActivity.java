@@ -1,5 +1,6 @@
 package com.example.waitou.rxjava;
 
+import android.os.Handler;
 import android.view.View;
 
 import com.example.waitou.rxjava.base.BaseActivity;
@@ -9,6 +10,7 @@ import com.example.waitou.rxjava.base.BaseActivity;
  * date 2018/7/31
  */
 public class CircleActivity extends BaseActivity {
+    Handler handler = new Handler();
     @Override
     protected boolean isOverridePendingTransition() {
         return false;
@@ -23,7 +25,7 @@ public class CircleActivity extends BaseActivity {
     protected void initData() {
         super.initData();
 
-       CircleProgressView circleProgressView = (CircleProgressView) findViewById(R.id.progress);
+        CircleProgressView circleProgressView = (CircleProgressView) findViewById(R.id.progress);
 
 
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,16 @@ public class CircleActivity extends BaseActivity {
             }
         });
 
+
+        SectorProgressView sectorProgressView = findViewById(R.id.download_progress);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                sectorProgressView.setPercent(sectorProgressView.getPercent() + 1);
+
+                handler.postDelayed(this,500);
+            }
+        }, 500);
 
 
     }
